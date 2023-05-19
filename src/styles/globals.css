@@ -1,27 +1,78 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.userItem {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  max-width: 20%;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.containerForItems {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  max-width: 1100px;
+  min-width: 335px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: #143646;
+}
+
+.userItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  max-width: 33%;
+  padding: 20px 20px;
+  margin: 20px 20px;
+  background-color: #e6e6f0;
+  border: 1px solid black;
+}
+
+.userItem.itemOnPage {
+  align-items: flex-start;
+}
+
+.listContainer {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #9e4dc3;
+}
+
+.paginationButton {
+  margin-right: 5px;
+}
+
+.userItemLink {
+  text-decoration: none;
+  color: #24a3ff;
+}
+
+.userFormClass {
+  background-color: #24a3ff;
+  margin: 10px 0;
+}
+
+.findedInList {
+  color: #e2e2e4;
+}
+
+.inputForm {
+  margin-left: 76px;
+  border-radius: 5px;
+}
+
+.paginationEvenButton {
+  cursor: pointer;
 }
